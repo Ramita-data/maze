@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* 🔮 Animated gradient background */
+.animated-bg {
+  background: linear-gradient(270deg, #8e2de2, #4a00e0, #ff6fd8, #3813c2);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating sparkles */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+header {
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav a:hover { color: #ffd700; }
+
+main {
+  padding: 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff66c4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+.btn:hover { background: #ff8bd8; }
+
+canvas {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+  border-radius: 15px;
+}
+
+/* Mobile Controls */
+.mobile-controls {
+  margin-top: 20px;
+}
+.mobile-controls button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 10px;
+}
+.mobile-controls button:active {
+  background: rgba(255,255,255,0.4);
+}
+
+input, textarea {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
